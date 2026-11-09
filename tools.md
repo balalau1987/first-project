@@ -21,3 +21,9 @@
 
 ## Установлено
 Из anthropics/skills (коммит 2c5958e, лицензия Apache 2.0) в `.claude/skills/`: все 19 официальных скиллов (docx, xlsx, pdf, pptx, academy-guide, algorithmic-art, brand-guidelines, canvas-design, claude-api, discernment-nudge, doc-coauthoring, frontend-design, internal-comms, mcp-builder, skill-creator, slack-gif-creator, theme-factory, web-artifacts-builder, webapp-testing).
+
+## Сайты и боты (установлено)
+- `telegram-bot-builder`: davila7/claude-code-templates, MIT. Telegram Bot API, Node.js и Python.
+- `max-bot-builder`: свой скилл по официальной спецификации MAX Bot API (max-messenger/max-bot-api-client-go, Apache 2.0).
+- `vercel-react-best-practices`, `vercel-composition-patterns`, `vercel-deploy-to-vercel`: vercel-labs/agent-skills, MIT.
+- Не установлен `web-design-guidelines` (Vercel): при каждом запуске загружает инструкции с внешнего адреса.
