@@ -27,3 +27,6 @@
 - `max-bot-builder`: свой скилл по официальной спецификации MAX Bot API (max-messenger/max-bot-api-client-go, Apache 2.0).
 - `vercel-react-best-practices`, `vercel-composition-patterns`, `vercel-deploy-to-vercel`: vercel-labs/agent-skills, MIT.
 - Не установлен `web-design-guidelines` (Vercel): при каждом запуске загружает инструкции с внешнего адреса.
+
+## Авито (установлено)
+- `avito-api`: MissiaL/avito-api (коммит 9dac805), MIT. Business API Авито: объявления, мессенджер, автозагрузка, статистика, продвижение, заказы, доставка. Справочник на 256 методов, снимок каталога от 03.10.2026.
