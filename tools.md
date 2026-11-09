@@ -20,4 +20,4 @@
 3. Положить в `.claude/skills/<имя>/` этого репозитория — тогда Claude подхватит его автоматически.
 
 ## Установлено
-Из anthropics/skills (коммит 2c5958e, лицензия Apache 2.0) в `.claude/skills/`: docx, xlsx, pdf, pptx.
+Из anthropics/skills (коммит 2c5958e, лицензия Apache 2.0) в `.claude/skills/`: все 19 официальных скиллов (docx, xlsx, pdf, pptx, academy-guide, algorithmic-art, brand-guidelines, canvas-design, claude-api, discernment-nudge, doc-coauthoring, frontend-design, internal-comms, mcp-builder, skill-creator, slack-gif-creator, theme-factory, web-artifacts-builder, webapp-testing).
