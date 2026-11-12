@@ -28,6 +28,7 @@ YouTube-канал про строительство. Персонаж — Дя�
 
 ## Сделано
 - Написан первый сценарий Shorts про фундамент в ноябре (55 сек).
+- Сценарии Shorts #2–4 и промпт аватара HeyGen — в `vasya_pipeline/shorts/`.
 - В `vasya_pipeline/modules/` — черновики (не проверены): transcribe, analyze, subtitles, storyboard, animations.
 
 ## Следующие шаги
