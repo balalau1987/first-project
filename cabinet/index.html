@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет — Рабочий дом</title>
+  <link rel="stylesheet" href="cabinet.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar__in">
+      <a class="brand" href="./">Рабочий&nbsp;дом</a>
+      <input id="search" class="search" type="search" placeholder="Поиск по объявлениям" aria-label="Поиск">
+      <button id="btn-new" class="btn btn--primary" type="button">+ Разместить объявление</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="profile" aria-label="Профиль">
+      <div class="avatar" aria-hidden="true">Я</div>
+      <div>
+        <h1>Личный кабинет</h1>
+        <p class="muted" id="stats"></p>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <nav class="tabs" role="tablist" aria-label="Разделы">
+        <button role="tab" data-tab="active" aria-selected="true">Активные <span class="count" data-count="active"></span></button>
+        <button role="tab" data-tab="archive" aria-selected="false">Архив <span class="count" data-count="archive"></span></button>
+        <button role="tab" data-tab="fav" aria-selected="false">Избранное <span class="count" data-count="fav"></span></button>
+      </nav>
+      <div class="filters">
+        <select id="f-cat" aria-label="Категория"></select>
+        <select id="f-sort" aria-label="Сортировка">
+          <option value="new">Сначала новые</option>
+          <option value="cheap">Сначала дешевле</option>
+          <option value="rich">Сначала дороже</option>
+          <option value="views">По просмотрам</option>
+        </select>
+      </div>
+    </div>
+
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <div id="empty" class="empty" hidden></div>
+  </main>
+
+  <!-- Форма объявления -->
+  <dialog id="dlg-form">
+    <form id="form" method="dialog" novalidate>
+      <header class="dlg__head">
+        <h2 id="form-title">Новое объявление</h2>
+        <button type="button" class="icon" data-close aria-label="Закрыть">×</button>
+      </header>
+      <label>Заголовок*
+        <input name="title" maxlength="80" required placeholder="Например: Требуется бригада плиточников">
+      </label>
+      <div class="row">
+        <label>Категория*
+          <select name="category" required></select>
+        </label>
+        <label>Цена / оплата, ₽
+          <input name="price" type="number" min="0" step="1" placeholder="0 — договорная">
+        </label>
+      </div>
+      <div class="row">
+        <label>Город*
+          <input name="city" maxlength="60" required placeholder="Москва">
+        </label>
+        <label>Телефон*
+          <input name="phone" type="tel" maxlength="20" required placeholder="+7 900 000-00-00">
+        </label>
+      </div>
+      <label>Описание*
+        <textarea name="description" rows="5" maxlength="3000" required placeholder="Условия, обязанности, требования…"></textarea>
+      </label>
+      <div>
+        <span class="label">Фото (до 5)</span>
+        <div id="photos" class="photos"></div>
+        <input id="photo-input" type="file" accept="image/*" multiple hidden>
+      </div>
+      <p id="form-error" class="error" role="alert" hidden></p>
+      <footer class="dlg__foot">
+        <button type="button" class="btn" data-close>Отмена</button>
+        <button type="submit" class="btn btn--primary">Опубликовать</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <!-- Просмотр объявления -->
+  <dialog id="dlg-view">
+    <div id="view"></div>
+  </dialog>
+
+  <script src="cabinet.js"></script>
+</body>
+</html>
